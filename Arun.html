@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phygicart Login</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: #e6e6e6;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .login-box {
+        background: #fff;
+        padding: 30px;
+        width: 350px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: 500;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+
+    .forgot {
+        text-align: right;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .forgot a {
+        color: #1a73e8;
+        text-decoration: none;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 15px;
+        padding: 12px;
+        background: #1565c0;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #0d47a1;
+    }
+
+    .signup {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .signup span {
+        color: red;
+        cursor: pointer;
+    }
+
+    /* PRANK PAGE */
+    #prankPage {
+        display: none;
+        height: 100vh;
+        background: #ffffff;
+        text-align: center;
+        padding-top: 20%;
+    }
+
+    #prankPage h1 {
+        font-size: 42px;
+        color: #ff3b3b;
+    }
+
+    #prankPage p {
+        font-size: 22px;
+        margin-top: 10px;
+        color: #333;
+    }
+</style>
+</head>
+<body>
+
+<!-- LOGIN PAGE -->
+<div class="container" id="loginPage">
+    <div class="login-box">
+        <h2>🛒 Phygicart</h2>
+
+        <label>User ID</label>
+        <input type="text" placeholder="User ID">
+
+        <label>Password</label>
+        <input type="password" placeholder="Password">
+
+        <div class="forgot">
+            <a href="#">Forgot Password?</a>
+        </div>
+
+        <button onclick="showPrank()">Login</button>
+
+        <div class="signup">
+            If you don't have an account <span>Sign Up</span> here
+        </div>
+    </div>
+</div>
+
+<!-- PRANK PAGE -->
+<div id="prankPage">
+    <h1>😜 APRIL FOOL!</h1>
+    <p>Don't be fool anymore,<br>because you're already a fool 😜</p>
+</div>
+
+<script>
+function showPrank() {
+    document.getElementById("loginPage").style.display = "none";
+    document.getElementById("prankPage").style.display = "block";
+}
+</script>
+
+</body>
+</html>
